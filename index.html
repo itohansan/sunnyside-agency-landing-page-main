@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Sunnyside agency landing page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        /* font-size: 62.5%; */
+      }
+      body {
+        box-sizing: border-box;
+        background-color: cadetblue;
+        font-size: 18px;
+      }
+      .navbar {
+        /* background-color: bisque; */
+        padding: 16px;
+        /* display: flex; */
+      }
+      .nav--items {
+        display: flex;
+      }
+      .logo {
+      }
+      .nav--right {
+        margin-left: auto;
+      }
+      .nav-link-items {
+        list-style: none;
+        display: flex;
+      }
+      .nav-link-items a {
+        text-decoration: none;
+      }
+
+      .nav--link {
+        padding-right: 18px;
+      }
+      .toggle--menu {
+        display: none;
+        background-color: chartreuse;
+        cursor: pointer;
+        position: absolute;
+        right: 0;
+        margin-right: 18px;
+      }
+      .toggle--menu .menu-icon-close {
+        display: none;
+      }
+      .menu--icon {
+      }
+
+      .hero--section {
+        background-image: url(images/desktop/image-header.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        height: 110vh;
+      }
+      .hero-text {
+        display: flex;
+        flex-direction: column;
+        /* margin: 100px auto; */
+        justify-content: center;
+        align-items: center;
+      }
+      .arrow-down {
+        width: 2rem;
+      }
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      /* media queries */
+      @media (max-width: 768px) {
+        .nav-link-items {
+          flex-direction: column;
+          margin-left: 0;
+          display: block;
+          font-size: 24px;
+        }
+        .nav-link-items li {
+          padding-bottom: 30px;
+        }
+        .toggle--menu {
+          display: block;
+          z-index: 999;
+        }
+        .menu--icon {
+          background-color: gold;
+          align-self: flex-end;
+          display: block;
+          cursor: pointer;
+        }
+        .nav--right {
+          width: 100%;
+          height: 100vh;
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: flex;
+          background-color: rgba(165, 42, 42, 0.8);
+          justify-content: center;
+          align-items: center;
+          opacity: 0;
+          pointer-events: none;
+          visibility: hidden;
+        }
+        .nav-open .nav--right {
+          opacity: 1;
+          pointer-events: auto;
+          visibility: visible;
+        }
+        .nav-open .menu-icon-close {
+          display: block;
+        }
+        .nav-open .menu-icon-open {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero--section">
+      <div class="navbar">
+        <nav class="nav--items">
+          <div class="logo">
+            <img src="images/logo.svg" alt="sunnyside logo" />
+          </div>
+
+          <!-- Mobile Nav icons -->
+
+          <div class="toggle--menu">
+            <img
+              src="images/icon-hamburger.svg"
+              class="menu--icon menu-icon-open"
+              alt="hamburger menu icon"
+            />
+            <ion-icon
+              name="close-sharp"
+              width="38px"
+              class="menu--icon menu-icon-close"
+            ></ion-icon>
+          </div>
+
+          <!--Right Nav  -->
+          <div class="nav--right">
+            <ul class="nav-link-items">
+              <li class="nav--link">
+                <a href="#">About</a>
+              </li>
+              <li class="nav--link">
+                <a href="#">Services</a>
+              </li>
+              <li class="nav--link">
+                <a href="#">Projects</a>
+              </li>
+              <li class="nav--link cta--button">
+                <a href="#" class="cta">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <div class="hero-text">
+        <h2>We are creatives</h2>
+        <!-- <img src="images/desktop/image-header.jpg" alt="" width="220px" /> -->
+        <img
+          src="images/icon-arrow-down.svg"
+          alt="arrow down icon"
+          class="arrow-down"
+        />
+      </div>
+    </section>
+
+    Transform your brand We are a full-service creative agency specializing in
+    helping brands grow fast. Engage your clients through compelling visuals
+    that do most of the marketing for you. Learn more Stand out to the right
+    audience Using a collaborative formula of designers, researchers,
+    photographers, videographers, and copywriters, we’ll build and extend your
+    brand in digital places. Learn more Graphic design Great design makes you
+    memorable. We deliver artwork that underscores your brand message and
+    captures potential clients’ attention. Photography Increase your credibility
+    by getting the most stunning, high-quality photos that improve your business
+    image. Client testimonials We put our trust in Sunnyside and they delivered,
+    making sure our needs were met and deadlines were always hit. Emily R.
+    Marketing Director Sunnyside’s enthusiasm coupled with their keen interest
+    in our brand’s success made it a satisfying and enjoyable experience. Thomas
+    S. Chief Operating Officer Incredible end result! Our sales increased over
+    400% when we worked with Sunnyside. Highly recommended! Jennie F. Business
+    Owner About Services Projects Contact
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+    <script>
+      const navBar = document.querySelector(".navbar");
+      const mobileNav = document.querySelector(".toggle--menu");
+      mobileNav.addEventListener("click", function () {
+        navBar.classList.toggle("nav-open");
+      });
+      if (classList.contains("nav--link")) navBar.classList.toggle("nav-open");
+    </script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
