@@ -411,6 +411,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
+
     position: relative;
   }
 
@@ -428,7 +429,7 @@ body {
     font-size: 42px;
   }
   .arrow-down {
-    bottom: 110px;
+    top: 340px;
     height: 15%;
   }
 
