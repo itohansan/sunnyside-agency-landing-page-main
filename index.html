@@ -13,33 +13,45 @@
       href="./images/favicon-32x32.png"
     />
 
+    <!-- googlefonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Frontend Mentor | Sunnyside agency landing page</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+      /* font-family: 'Barlow', sans-serif; */
+      /* font-family: 'Fraunces', serif; */
       * {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
-        /* font-size: 62.5%; */
       }
       html {
         font-size: 62.5%;
       }
       body {
-        /* box-sizing: border-box; */
         background-color: hsl(0, 0%, 100%);
+        font-family: "Barlow", sans-serif;
         font-size: 18px;
-        /* width: 80vw; */
+        font-weight: 600;
         overflow-x: hidden;
-        /* padding: 0 40px; */
       }
-      /* .section--all {
-        background-color: aquamarine;
-        /* padding: 0 20px;
-      } */
+
+      /* navigation bar */
       .navbar {
-        padding: 30px 40px;
+        padding: 40px;
       }
       .nav--items {
         display: flex;
@@ -64,31 +76,26 @@
       .nav--link:hover,
       .nav--link:active {
         text-decoration: none;
-        color: hsl(51, 100%, 49%);
-        transition: 0.5s all;
+        color: hsl(7, 99%, 70%);
+        transition: 0.3s all;
       }
       .cta:link,
       .cta:visited {
+        font-family: "Fraunces", serif;
         background-color: hsl(0, 0%, 100%);
         color: hsl(212, 27%, 19%);
-        padding: 9px 20px;
+        text-transform: uppercase;
+        padding: 1.4rem 2.2rem;
         border-radius: 4rem;
       }
-
       .cta:hover,
       .cta:active {
         background-color: hsla(0, 0%, 100%, 0.35);
         color: hsl(0, 0%, 100%);
-        padding: 9px 20px;
-        border-radius: 40px;
       }
 
-      /* .nav--link {
-        padding-right: 18px;
-      } */
       .toggle--menu {
         display: none;
-        background-color: chartreuse;
         cursor: pointer;
         position: absolute;
         right: 0;
@@ -97,25 +104,13 @@
       .toggle--menu .menu-icon-close {
         display: none;
       }
-      .menu--icon {
-      }
 
-      .hero--section {
-        /* width: 90vw; */
-        /* position: relative; */
-      }
       .hero {
         background: url(images/desktop/image-header.jpg) center;
         background-size: cover;
         background-repeat: no-repeat;
         height: 100vh;
-        /* max-width: 80%; */
-        /* position: absolute;
-        top: 0;
-        left: 0; */
-        /* min-height: 100%; */
-
-        /* background-position: top center; */
+        position: relative;
       }
       .hero-text {
         display: flex;
@@ -125,27 +120,23 @@
         align-items: center;
       }
       .creatives {
+        font-family: "Fraunces", serif;
         font-weight: 900;
         font-size: 50px;
         text-transform: uppercase;
-        word-spacing: 7px;
+        word-spacing: 1.2rem;
+        letter-spacing: 0.8rem;
         color: hsl(0, 0%, 100%);
       }
       .arrow-down {
-        width: 2rem;
-        margin-top: 90px;
+        height: 10rem;
+        position: absolute;
+        bottom: 42%;
         z-index: 999;
       }
 
       /* ----- */
-
-      /* .card--img {
-        max-width: auto;
-        max-width: 100%;
-        object-fit: contain;
-      } */
       .services {
-        /* max-width: 80vw; */
         display: grid;
         grid-template-columns: 1fr 1fr;
       }
@@ -172,115 +163,202 @@
         position: absolute;
         bottom: 50px;
         text-align: center;
-        padding: 0 120px;
       }
       .caption--heading {
         margin-bottom: 20px;
+        font-family: "Fraunces", serif;
+        font-weight: 900;
       }
       .caption--text {
         line-height: 1.2;
+        text-align: center;
+        padding: 0 16rem;
       }
       .graphics--design {
         background-image: url(images/desktop/image-graphic-design.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        color: hsl(167, 40%, 24%);
       }
       .photography {
         background-image: url(images/desktop/image-photography.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        color: hsl(198, 62%, 26%);
       }
       .card--details {
         max-height: 70vh;
-        padding: 8rem;
+        padding: 0 10rem;
         overflow: hidden;
         display: flex;
         flex-direction: column;
-
-        /* align-items: center; */
         justify-content: center;
       }
 
       .card--heading {
-        font-weight: 600;
-        font-size: 40px;
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        color: hsl(212, 27%, 19%);
         margin-bottom: 40px;
-        text-transform: uppercase;
-        word-spacing: 2;
+        word-spacing: 2px;
+        line-height: 1.2;
       }
       .card--text {
+        color: hsl(210, 4%, 67%);
         line-height: 1.6;
         margin-bottom: 40px;
       }
+      .more--cta {
+        text-transform: uppercase;
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        color: hsl(0, 0%, 0%);
+      }
+      .learn-more-transform {
+        text-decoration: none;
+        position: relative;
+      }
+      .learn-more-transform::after {
+        position: absolute;
+        content: " ";
+        width: 15rem;
+        height: 10px;
+        bottom: -4px;
+        left: -5px;
+        border-radius: 5px;
+        margin-top: -8px;
+        background-color: hsl(51, 100%, 49%, 0.2);
+        z-index: -99;
+      }
+      .learn-more-transform:hover::after {
+        background-color: hsl(51, 100%, 49%);
+      }
+
+      .learn-more-stand-out {
+        text-decoration: none;
+        position: relative;
+      }
+      .learn-more-stand-out::after {
+        position: absolute;
+        content: " ";
+        width: 15rem;
+        height: 10px;
+        bottom: -4px;
+        left: -5px;
+        border-radius: 5px;
+        margin-top: -8px;
+        background-color: hsla(7, 99%, 70%, 0.2);
+        z-index: -99;
+      }
+      .learn-more-stand-out:hover::after {
+        background-color: hsl(7, 99%, 70%);
+      }
+
+      /*  */
+
       .testimonials--container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 100px auto;
+        padding: 12rem 0;
+        background-color: hwb(7 40% 0% / 0.08);
       }
       .testimonials--heading {
+        font-family: "Fraunces", serif;
+        font-weight: 900;
         color: hsl(210, 4%, 67%);
-        margin-bottom: 50px;
+        padding-bottom: 6rem;
         word-spacing: 2px;
+        letter-spacing: 0.6rem;
+        text-transform: uppercase;
       }
-
       .testimonials {
         display: flex;
-        margin: auto 100px;
-        padding: 20px;
+        margin: auto 10rem;
+        padding: 2rem;
         text-align: center;
-        gap: 20px;
+        gap: 2rem;
       }
       .testimonial--img {
         border-radius: 50%;
-        margin-bottom: 40px;
+        margin-bottom: 4rem;
       }
       .testimony {
         line-height: 1.4;
-        margin-bottom: 50px;
+        margin-bottom: 5rem;
+        color: hsl(213, 9%, 39%);
       }
       .testimonee--name {
+        font-family: "Fraunces", serif;
         color: hsl(212, 27%, 19%);
-        font-weight: 600;
-        margin-bottom: 10px;
+        font-weight: 900;
+        margin-bottom: 1rem;
       }
       .position {
-        color: hsl(210, 4%, 67%);
+        color: hsla(206, 4%, 67%, 0.8);
+        font-size: 16px;
       }
 
       /* ----- */
-      .img-view-section {
+      .img--gallery {
         width: 100vw;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
       }
-      .img-view-section img {
-        /* object-fit: cover; */
+      .img--gallery img {
         width: 25vw;
       }
+
       /* footer */
       .section--footer {
-        background-color: hsl(168, 34%, 41%);
+        background-color: hsla(168, 34%, 41%, 0.2);
         text-align: center;
-        padding: 40px 0;
+        padding: 7rem 0;
       }
       .logo--footer {
-        margin-bottom: 20px;
+        margin-bottom: 4rem;
+        filter: invert(48%) sepia(27%) saturate(633%) hue-rotate(118deg)
+          brightness(95%) contrast(90%);
       }
-      .nav--footer {
-      }
+
       .nav-list-footer {
         list-style: none;
         display: flex;
+        gap: 5rem;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 7rem;
+        color: #458c7e;
+      }
+      .nav-link-footer:link,
+      .nav-link-footer:visited {
+        cursor: pointer;
+        text-decoration: none;
+        color: hsl(168, 34%, 42%);
+        transition: 0.5s all;
+      }
+      .nav-link-footer:hover,
+      .nav-link-footer:active {
+        text-decoration: none;
+        color: hsl(0, 0%, 100%);
+        transition: 0.5s all;
       }
       .icon--footer {
+        display: flex;
+        gap: 3rem;
+        justify-content: center;
+      }
+      .icon:hover {
+        cursor: pointer;
+        filter: brightness(0) invert(1);
       }
       /*  */
       .attribution {
         font-size: 11px;
         text-align: center;
+        margin-top: 3rem;
       }
 
       .attribution a {
@@ -300,10 +378,10 @@
         }
         .toggle--menu {
           display: block;
-          z-index: 999;
+          z-index: 99999;
         }
         .menu--icon {
-          background-color: gold;
+          /* background-color: gold; */
           align-self: flex-end;
           display: block;
           cursor: pointer;
@@ -315,12 +393,13 @@
           top: 0;
           left: 0;
           display: flex;
-          background-color: rgba(165, 42, 42, 0.8);
+          background-color: hsl(7, 99%, 70%);
           justify-content: center;
           align-items: center;
           opacity: 0;
           pointer-events: none;
           visibility: hidden;
+          z-index: 9999;
         }
         .nav-open .nav--right {
           opacity: 1;
@@ -338,12 +417,12 @@
   </head>
   <body>
     <div class="section--all">
-      <section class="hero--section">
+      <div class="hero--section">
         <div class="hero">
           <div class="navbar">
             <nav class="nav--items">
               <div class="logo">
-                <img src="images/logo.svg" alt="sunnyside logo" />
+                <img src="images/logo.svg" alt="sunnyside logo" width="150%" />
               </div>
 
               <!-- Mobile Nav icons -->
@@ -383,7 +462,6 @@
 
           <div class="hero-text">
             <p class="creatives">We are creatives</p>
-            <!-- <img src="images/desktop/image-header.jpg" alt="" width="220px" /> -->
             <img
               src="images/icon-arrow-down.svg"
               alt="arrow down icon"
@@ -391,58 +469,58 @@
             />
           </div>
         </div>
-      </section>
+      </div>
       <!-- -------- -->
 
       <div class="services container">
-        <!-- <div class="card transform"> -->
         <div class="card--details">
-          <h3 class="card--heading">Transform your brand</h3>
+          <h2 class="card--heading">
+            Transform your <br />
+            brand
+          </h2>
           <p class="card--text">
             We are a full-service creative agency specializing in helping brands
             grow fast. Engage your clients through compelling visuals that do
             most of the marketing for you
           </p>
-          <a href="">Learn more</a>
+          <div>
+            <a href="#" class="learn-more-transform">
+              <span class="more--cta">Learn more</span></a
+            >
+          </div>
         </div>
 
-        <div class="img--container transform">
-          <!-- <img
-            src="images/desktop/image-transform.jpg"
-            class="card--img"
-            alt=""
-          /> -->
-        </div>
-        <!-- </div> -->
+        <div
+          class="img--container transform"
+          title="egg on yellow background"
+        ></div>
 
-        <!-- <div class="card transform"> -->
-        <div class="img--container stand--out">
-          <!-- <img
-            src="images/desktop/image-transform.jpg"
-            class="card--img"
-            alt=""
-          /> -->
-        </div>
+        <!-- <div class="card stand-out"> -->
+        <div class="img--container stand--out" title="a wine cup"></div>
         <div class="card--details">
-          <h3 class="card--heading">Stand out to the right audience</h3>
+          <h2 class="card--heading">
+            Stand out to the right <br />
+            audience
+          </h2>
           <p class="card--text">
             Using a collaborative formula of designers, researchers,
-            photographers, videographers, and copywriters, we’ll build and
+            photographers, videographers, and copywriters, we&apos;ll build and
             extend your brand in digital places.
           </p>
-          <a href="">Learn more</a>
+          <div>
+            <a href="#" class="learn-more-stand-out"
+              ><span class="more--cta">Learn more</span></a
+            >
+          </div>
         </div>
-        <!-- </div> -->
-
-        <!-- <div class="card transform"> -->
 
         <div class="img--container graphics--design">
           <div class="caption">
             <h3 class="caption--heading">Graphic design</h3>
             <p class="caption--text">
               Great design makes you memorable. We deliver artwork that
-              underscores your brand message and captures potential clients’
-              attention.
+              underscores your brand message and captures potential
+              clients&apos; attention.
             </p>
           </div>
         </div>
@@ -466,7 +544,7 @@
             <img
               src="images/image-emily.jpg"
               class="testimonial--img"
-              alt=""
+              alt="photo of Emily"
               width="90px"
             />
             <p class="testimony">
@@ -481,12 +559,13 @@
             <img
               src="images/image-thomas.jpg"
               class="testimonial--img"
-              alt=" "
+              alt="photo of Thomas "
               width="90px"
             />
             <p class="testimony">
-              Sunnyside’s enthusiasm coupled with their keen interest in our
-              brand’s success made it a satisfying and enjoyable experience.
+              Sunnyside&apos;s enthusiasm coupled with their keen interest in
+              our brand&apos;s success made it a satisfying and enjoyable
+              experience.
             </p>
             <p class="testimonee--name">Thomas S.</p>
             <p class="position">Chief Operating Officer</p>
@@ -496,7 +575,7 @@
             <img
               src="images/image-jennie.jpg"
               class="testimonial--img"
-              alt=""
+              alt="photo of Jennie"
               width="90px"
             />
             <p class="testimony">
@@ -508,79 +587,67 @@
           </div>
         </div>
       </div>
-      <!-- img display -->
-      <div class="img-view-section">
+      <!-- img gallery  -->
+      <div class="img--gallery">
         <img
           src="images/desktop/image-gallery-milkbottles.jpg"
           class="img--view"
-          alt=""
+          alt="milk bottles"
         />
         <img
           src="images/desktop/image-gallery-orange.jpg"
           class="img--view"
-          alt=""
+          alt="half orange on a plate"
         />
         <img
           src="images/desktop/image-gallery-cone.jpg"
           class="img--view"
-          alt=""
+          alt="ice-cream cone"
         />
         <img
           src="images/desktop/image-gallery-sugarcubes.jpg"
           class="img--view"
-          alt=""
+          alt="sugarcubes stacked on top of eachother"
         />
       </div>
     </div>
     <!-- footer -->
     <footer class="section--footer">
       <div class="logo--footer">
-        <img src="images/logo.svg" alt="sunnyside logo" />
+        <img src="images/logo.svg" alt="sunnyside logo" width="13%" />
       </div>
       <div class="nav--footer">
         <ul class="nav-list-footer">
           <li class="nav--list">
-            <a href="#" class="nav--link">About</a>
+            <a href="#" class="nav-link-footer">About</a>
           </li>
           <li class="nav--list">
-            <a href="#" class="nav--link">Services</a>
+            <a href="#" class="nav-link-footer">Services</a>
           </li>
           <li class="nav--list">
-            <a href="#" class="nav--link">Projects</a>
+            <a href="#" class="nav-link-footer">Projects</a>
           </li>
         </ul>
       </div>
       <div class="icon--footer">
-        <img src="images/icon-facebook.svg" alt=" " class="icon" />
-        <img src="images/icon-instagram.svg" alt=" " class="icon" />
-        <img src="images/icon-twitter.svg" alt=" " class="icon" />
-        <img src="images/icon-pinterest.svg" alt=" " class="icon" />
+        <img src="images/icon-facebook.svg" alt="facebook icon " class="icon" />
+        <img
+          src="images/icon-instagram.svg"
+          alt="instagram icon "
+          class="icon"
+        />
+        <img src="images/icon-twitter.svg" alt="twitter icon " class="icon" />
+        <img src="images/icon-pinterest.svg" alt="pintrest icon" class="icon" />
+      </div>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">itohan</a>.
       </div>
     </footer>
-
-    <!-- Transform your brand We are a full-service creative agency specializing in
-      helping brands grow fast. Engage your clients through compelling visuals
-      that do most of the marketing for you. Learn more Stand out to the right
-      audience Using a collaborative formula of designers, researchers,
-      photographers, videographers, and copywriters, we’ll build and extend your
-      brand in digital places. Learn more Graphic design Great design makes you
-      memorable. We deliver artwork that underscores your brand message and
-      captures potential clients’ attention. Photography Increase your
-      credibility by getting the most stunning, high-quality photos that improve
-      your business image. Client testimonials We put our trust in Sunnyside and
-      they delivered, making sure our needs were met and deadlines were always
-      hit. Emily R. Marketing Director Sunnyside’s enthusiasm coupled with their
-      keen interest in our brand’s success made it a satisfying and enjoyable
-      experience. Thomas S. Chief Operating Officer Incredible end result! Our
-      sales increased over 400% when we worked with Sunnyside. Highly
-      recommended! Jennie F. Business Owner About Services Projects Contact -->
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
-
+    <!-- -----JAVASCRIPT------ -->
     <script>
       const navBar = document.querySelector(".navbar");
       const mobileNav = document.querySelector(".toggle--menu");
