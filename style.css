@@ -106,7 +106,7 @@ body {
 .arrow-down {
   height: 10rem;
   position: absolute;
-  bottom: 42%;
+  top: 280px;
   z-index: 999;
 }
 /* about services */
@@ -428,7 +428,7 @@ body {
     font-size: 42px;
   }
   .arrow-down {
-    bottom: 40%;
+    bottom: 100px;
     height: 20%;
   }
 
